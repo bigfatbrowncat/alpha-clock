@@ -23,6 +23,10 @@ IF(APPLE)
 		${ALLRESOURCES}
 	)
 	
+	set_target_properties(${PROJNAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST 
+		"${CMAKE_CURRENT_SOURCE_DIR}/MacOSXBundleInfo.plist.in"
+	)
+	
 	set_source_files_properties(
     		${ALLRESOURCES}
 	    PROPERTIES
